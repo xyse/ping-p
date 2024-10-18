@@ -1,8 +1,8 @@
 services:
 - type: web
-  name: docker-alpine-vps
+  name: ping-pong-deploy
   runtime: docker
-  repo: https://github.com/xyse/docker-alpine-vps
+  repo: https://github.com/xyse/ping-pong-deploy
   plan: free
   envVars:
   - key: PASSWORD

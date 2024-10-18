@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpinelinux/docker-cli
 
 ARG USERNAME
 ARG PASSWORD
