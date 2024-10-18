@@ -1,4 +1,4 @@
-# docker-alpine-vps
+# ping-pong-deploy
 
 *Want a minimal vps, with easy terminal access?*
 

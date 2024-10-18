@@ -3,7 +3,9 @@ FROM alpine:3.20
 ARG USERNAME
 ARG PASSWORD
 
-RUN apk add ttyd
+RUN apk add ttyd docker
+
+RUN docker pull docker.io/panifie/pingpong-precomp-interactive
 
 EXPOSE 8080
 
