@@ -8,4 +8,4 @@ RUN rc-update add docker boot
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "docker pull docker.io/panifie/pingpong-precomp-interactive && ttyd -W -p 8080 -c $USERNAME:$PASSWORD sh"]
+ENTRYPOINT [ "/entrypoint.sh" ]
