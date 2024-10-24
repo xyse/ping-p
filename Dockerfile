@@ -4,11 +4,8 @@ ARG USERNAME
 ARG PASSWORD
 
 RUN apk add --update ttyd docker openrc
-RUN rc-service docker start
-RUN rc-service docker status
-
-RUN docker pull docker.io/panifie/pingpong-precomp-interactive
+RUN rc-update add docker boot
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "ttyd -W -p 8080 -c $USERNAME:$PASSWORD sh"]
+CMD ["sh", "-c", "docker pull docker.io/panifie/pingpong-precomp-interactive && ttyd -W -p 8080 -c $USERNAME:$PASSWORD sh"]
