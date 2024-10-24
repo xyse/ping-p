@@ -1,9 +1,10 @@
-FROM alpinelinux/docker-cli
+FROM alpine:3.20
 
 ARG USERNAME
 ARG PASSWORD
 
-RUN apk add ttyd docker
+RUN apk add --update ttyd docker
+RUN rc-update add docker boot
 
 RUN docker pull docker.io/panifie/pingpong-precomp-interactive
 
