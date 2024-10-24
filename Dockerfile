@@ -8,4 +8,4 @@ RUN rc-update add docker boot
 
 EXPOSE 8080
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+CMD ["sh", "-c", "ttyd -W -p 8080 -c $USERNAME:$PASSWORD sh"]
